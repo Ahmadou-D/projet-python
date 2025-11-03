@@ -1,0 +1,53 @@
+JEU DE DODGEM : DOCUMENTATION
+
+- newBoard(n)
+  Crée le plateau vide et place les pions de départ pour les deux joueurs :
+  - Pions "x" du joueur 1 sur la dernière ligne (sauf la première case)
+  - Pions "o" du joueur 2 sur la première colonne (sauf la dernière case)
+
+- displayBoard(board, n)
+  Affiche le plateau à l’écran.  
+  Les cases sont numérotées, et les symboles sont :
+  - “.” pour une case vide  
+  - “x” pour le joueur 1  
+  - “o” pour le joueur 2  
+
+- possiblePawn(board, n, player, i, j)
+  Vérifie si le pion choisi appartient bien au joueur et peut être déplacé selon les règles du jeu.
+
+- selectPawn(board, n, player)
+  Demande au joueur de choisir les coordonnées d’un pion.  
+  Tant que le pion choisi n’est pas valide (ou bloqué), le joueur doit recommencer.
+
+- possibleMove(board, n, player, i, j, direction)
+  Vérifie si le déplacement demandé est possible selon la direction choisie et les règles du jeu.
+
+- selectMove(board, n, player, i, j) 
+  Demande au joueur de choisir une direction pour son déplacement :  
+  1 = Nord, 2 = Est, 3 = Sud, 4 = Ouest  
+  Tant que le déplacement est invalide, le joueur doit recommencer.
+
+- move(board, n, player, i, j, direction)  
+  Effectue le déplacement du pion choisi, ou le retire du plateau si le coup fait sortir le pion.
+
+- win(board, n, player)  
+  Vérifie si le joueur a perdu (tous ses pions sont sortis ou bloqués).  
+  Si c’est le cas, l’autre joueur est déclaré vainqueur.
+
+- dodgem(n)  
+  Fonction principale du jeu.  
+  - Initialise le plateau  
+  - Fait jouer les deux joueurs tour à tour  
+  - Vérifie après chaque tour si un joueur a gagné  
+  - Affiche le plateau à chaque étape
+
+
+1. Le programme demande la taille du plateau (par exemple 3 ou 5).  
+2. Les pions sont placés automatiquement selon les règles.  
+3. Les joueurs jouent chacun leur tour :  
+   - Choix d’un pion  
+   - Choix d’une direction  
+   - Déplacement effectué  
+4. Le jeu s’arrête dès qu’un joueur ne peut plus jouer ou a sorti tous ses pions.  
+5. Le vainqueur est alors affiché à l’écran.
+

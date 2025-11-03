@@ -1,0 +1,36 @@
+JEU DE SNORT: DOCUMENTATION
+
+
+- La fonction newBoard(n) crée un plateau vide de taille n×n, rempli de zéros.
+  (0 = case vide, 1 = pion du joueur 1, 2 = pion du joueur 2)
+
+- La fonction displayBoard(board, n) affiche le plateau à l’écran avec des symboles :
+  "." pour une case vide, "x" pour le joueur 1 et "o" pour le joueur 2.
+
+- La fonction possibleSquare(board, n, player, i, j) vérifie si un joueur peut poser un pion
+  sur la case (i, j). Elle regarde si la case est libre et si aucun pion adverse n’est placé
+  juste à côté.
+
+- La fonction selectSquare(board, n, player) demande au joueur les coordonnées d’une case.
+  Tant que la case n’est pas valide, elle redemande une saisie.
+
+- La fonction updateBoard(board, player, i, j) place le pion du joueur sur la case choisie.
+
+- La fonction again(board, n, player) vérifie si le joueur peut encore jouer.
+  Si aucune case valide n’est disponible, la partie se termine.
+
+- La fonction snort(n) gère le déroulement du jeu :
+  - Création du plateau
+  - Tour à tour, les joueurs placent leurs pions
+  - Si un joueur ne peut plus jouer, l’autre est déclaré vainqueur
+
+
+Le programme commence par demander la taille du plateau.  
+Ensuite, il alterne les tours entre les deux joueurs :
+- Affiche le plateau
+- Le joueur choisit une case
+- Le pion est placé
+- Le jeu vérifie si un joueur ne peut plus jouer
+
+La partie s’arrête automatiquement quand un joueur ne peut plus poser de pion.
+
